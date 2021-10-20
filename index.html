@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html data-theme="theme1">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>calc</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="cabeça">
+            <span>calc</span>
+
+            <div class="toggleContainer">
+                <span>THEME</span>
+                <div class="toggleBox">
+                    <div class="number">
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                    </div>
+                    <div class="toggle-btn">
+                        <span class="indicator"></span>
+                        <div class="theme-1"></div>
+                        <div class="theme-2"></div>
+                        <div class="theme-3"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section>
+            <input type="text" disabled placeholder="0">
+        </section>
+        <section>
+            <div class="calculadora">
+                <button data-js="button-number" value="7">7</button>
+                <button data-js="button-number" value="8">8</button>
+                <button data-js="button-number" value="9">9</button>
+                <button data-js="button-del" class="del">del</button>
+
+                <button data-js="button-number" value="4">4</button>
+                <button data-js="button-number" value="5">5</button>
+                <button data-js="button-number" value="6">6</button>
+                <button data-js="button-operation" value="+">+</button>
+
+                <button data-js="button-number" value="1">1</button>
+                <button data-js="button-number" value="2">2</button>
+                <button data-js="button-number" value="3">3</button>
+                <button data-js="button-operation" value="-">-</button>
+
+                <button data-js="button-operation" value=".">.</button>
+                <button data-js="button-number" value="0">0</button>
+                <button data-js="button-operation" value="/">/</button>
+                <button data-js="button-operation" value="*">x</button>
+
+                <button data-js="button-ce" value="ce" class="reset">RESET</button>
+                <button data-js="button-equal" value="=" class="equal">=</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/app.js" async defer></script>
+</body>
+
+</html>

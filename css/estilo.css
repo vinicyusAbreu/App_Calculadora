@@ -1,0 +1,289 @@
+:root {
+    font-size: 62.5%;
+    font-family: 'Spartan', sans-serif;
+}
+
+[data-theme="theme1"] {
+    /** Backgrounds */
+    --mainBackground: hsl(222, 26%, 31%);
+    --toggleBgEKeyPadBG: hsl(223, 31%, 20%);
+    --screenBG: hsl(224, 36%, 15%);
+    /*! Keys */
+    --keyBg: hsl(225, 21%, 49%);
+    --keyBgHover: hsl(225, 24%, 54%);
+    --keyShadow: hsl(224, 28%, 35%);
+    --keyBGToggle: hsl(6, 63%, 50%);
+    --keyBGToggleHover: hsl(6, 72%, 53%);
+    --keyShadowEqual: hsl(6, 70%, 34%);
+    --btnBG: hsl(30, 25%, 89%);
+    --btnBGHover: hsl(33, 31%, 93%);
+    --btnShadow: hsl(28, 16%, 65%);
+    /*? Text */
+    --texto: hsl(0, 0%, 100%);
+    --textoDel: hsl(0, 0%, 100%);
+    --textoReset: hsl(0, 0%, 100%);
+    --textoEqual: hsl(0, 0%, 100%);
+    --btn: hsl(221, 14%, 31%);
+}
+
+[data-theme="theme2"] {
+    /** Backgrounds */
+    --mainBackground: hsl(0, 0%, 90%);
+    --toggleBgEKeyPadBG: hsl(0, 5%, 81%);
+    --screenBG: hsl(0, 0%, 93%);
+    /*! Keys */
+    --keyBg: hsl(185, 42%, 37%);
+    --keyBgHover: hsl(185, 43%, 40%);
+    --keyShadow: hsl(185, 58%, 25%);
+    --keyBGToggle: hsl(25, 98%, 40%);
+    --keyBGToggleHover: hsl(25, 100%, 43%);
+    --keyShadowEqual: hsl(25, 99%, 27%);
+    --btnBG: hsl(45, 7%, 89%);
+    --btnBGHover: hsl(60, 7%, 94%);
+    --btnShadow: hsl(35, 11%, 61%);
+    /*? Text */
+    --texto: hsl(60, 10%, 19%);
+    --textoDel: hsl(0, 0%, 100%);
+    --textoReset: hsl(0, 0%, 100%);
+    --textoEqual: hsl(0, 0%, 100%);
+    --btn: hsl(60, 10%, 19%);
+}
+
+[data-theme="theme3"] {
+    /** Backgrounds */
+    --mainBackground: hsl(268, 75%, 9%);
+    --toggleBgEKeyPadBG: hsl(268, 71%, 12%);
+    --screenBG: hsl(268, 71%, 12%);
+    /*! Keys */
+    --keyBg: hsl(281, 89%, 26%);
+    --keyBgHover: hsl(281, 89%, 30%);
+    --keyShadow: hsl(285, 91%, 52%);
+    --keyBGToggle: hsl(176, 100%, 44%);
+    --keyBGToggleHover: hsl(176, 100%, 48%);
+    --keyShadowEqual: hsl(177, 92%, 70%);
+    --btnBG: hsl(268, 47%, 21%);
+    --btnBGHover: hsl(268, 47%, 25%);
+    --btnShadow: hsl(290, 70%, 36%);
+    /*? Text */
+    --texto: hsl(52, 100%, 62%);
+    --textoDel: hsl(0, 0%, 100%);
+    --textoReset: hsl(0, 0%, 100%);
+    --textoEqual: hsl(198, 20%, 13%);
+    --btn: hsl(52, 100%, 62%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--mainBackground);
+    transition: background .5s;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.cabeça {
+    width: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--texto);
+}
+
+.cabeça>span {
+    font-size: 2.8rem;
+}
+
+.toggleContainer {
+    display: flex;
+    width: 15rem;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.toggleContainer>span {
+    font-size: 1.4rem;
+}
+
+.number {
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.toggle-btn {
+    width: 6rem;
+    height: 2.1rem;
+    background-color: var(--toggleBgEKeyPadBG);
+    border-radius: 999px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    /* transition: all 0.2 ease; */
+    transition: .5s;
+}
+
+.indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--keyBGToggle);
+    position: absolute;
+    left: .3rem;
+    top: .3rem;
+    bottom: .3rem;
+    pointer-events: none;
+    /* transition: all 0.2 ease; */
+    transition: .5s;
+}
+
+.toggle-btn>div {
+    width: 33.33%;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+}
+
+section input {
+    width: 100%;
+    font-size: 4.2rem;
+    text-align-last: right;
+    padding-right: 2.5rem;
+    background-color: var(--screenBG);
+    color: var(--texto);
+    border-radius: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border: none;
+    outline: none;
+    user-select: none;
+    margin-bottom: 1rem;
+}
+
+.calculadora {
+    background-color: var(--toggleBgEKeyPadBG);
+    width: 50rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 2rem;
+    gap: 1.2rem;
+    border-radius: 1rem;
+}
+
+button {
+    font-size: 3.2rem;
+    text-align: center;
+    width: 100%;
+    height: 6.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    background-color: var( --btnBG);
+    color: var(--btn);
+    border-radius: .5rem;
+    box-shadow: 0 3px var(--btnShadow);
+    margin-bottom: .3rem;
+    transition: .2s;
+}
+
+.del {
+    background-color: blueviolet;
+    color: var(--textoDel);
+    background-color: var(--keyBg);
+    box-shadow: 0 3px var(--keyShadow);
+}
+
+.reset {
+    background-color: var(--keyBg);
+    grid-column-end: span 2;
+    width: 100%;
+    color: var(--textoReset);
+    box-shadow: 0 3px var(--keyShadow);
+}
+
+.equal {
+    background-color: var( --keyBGToggle);
+    grid-column-end: span 2;
+    width: 100%;
+    color: var(--textoEqual);
+    box-shadow: 0 4px var(--keyShadowEqual);
+}
+
+.equal:hover {
+    background-color: var(--keyBGToggleHover);
+}
+
+.del:hover,
+.reset:hover {
+    background-color: var(--keyBgHover);
+}
+
+button:hover {
+    background-color: var(--btnBGHover);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+@media (max-width:520px) {
+    .cabeça {
+        width: 90%;
+    }
+    section {
+        width: 90%;
+    }
+    .calculadora {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 2rem;
+        gap: 1rem;
+        border-radius: 1rem;
+    }
+    button {
+        font-size: 3rem;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: .3rem;
+    }
+}
+
+@media (max-width:450px) {
+    section input {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:380px) {
+    button {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:300px) {
+    section input {
+        font-size: 2rem;
+    }
+    button {
+        font-size: 2rem;
+    }
+}
